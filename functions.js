@@ -75,6 +75,9 @@ var Events_organizer = {
         var Event_info_age = "";
         var Event_info_price = "";
         var Event_archieved = "";
+        
+        //По някаква причина не иска да работи, взето е от stackoverflow
+        //var Event_date_to_string = Event.Date.toISOString().slice(0,10);
 
         for (var i = 0; i < Event_db.Events_collection.length; i++){
             var Event = Event_db.Events_collection[i];
@@ -243,6 +246,19 @@ var Events_organizer = {
             }
 
             console.log("Couldn't find this client in the event's list.");
+            console.log("----------------------------------------------------------");
+        }
+    },
+
+    //Show clients info
+    Show_clients_info: function() {
+
+        for(var i = 0; i < Event_db.Clients_collection.length; i++) {
+
+            var Client = Event_db.Clients_collection[i];
+                        
+            console.log(Client.id + ". Client: " + Client.Name + ", Gender: " + Client.Gender + ", Age: " + Client.Age + ", Money: $" + Client.Money + ", Visited events: " + Client.Visited_events + "/5.");
+            console.log("----------------------------------------------------------");        
         }
     },
 };
