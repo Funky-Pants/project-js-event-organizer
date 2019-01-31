@@ -99,10 +99,13 @@ Events_organizer.Show_client_list_for_event(1);
 //Events_organizer.Show_client_list_for_event(1, "M"); //will show only the men
 
 //Deleting client from event
-Events_organizer.Remove_client_from_event(1, 2);
+Events_organizer.Remove_client_from_event(1, 3);
 
 //Archieving event
 Events_organizer.Archive_event(1);
 
 //Show events info
 Events_organizer.Show_events_info();
+
+//Show clients info
+Events_organizer.Show_clients_info();
